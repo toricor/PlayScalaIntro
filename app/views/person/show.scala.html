@@ -1,0 +1,30 @@
+@(person: Person)(implicit request: RequestHeader, messages: Messages)
+
+@import helper._
+
+@main("ユーザー詳細") {
+
+<div class="col-xs-2">
+</div>
+<div class="col-xs-8">
+    <h2>ユーザー一覧</h2>
+
+    <table class="table table-hover">
+        <tr>
+            <th>ID</th>
+            <th>ニックネーム</th>
+            <th>年齢</th>
+        </tr>
+
+        <tr>
+            <td><a href="/persons/@person.id/edit">@person.id</a></td>
+            <td>@person.name</td>
+            <td>@person.age</td>
+        </tr>
+    </table>
+
+    <a href="/persons/@person.id/edit">ユーザー編集</a>
+</div>
+<div class="col-xs-2">
+</div>
+}
