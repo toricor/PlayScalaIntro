@@ -224,5 +224,5 @@ class PersonController @Inject() (
       }
     }
   }
-        case class PersonForm(id: Option[Long], name: String, age: Int)
 }
+        case class PersonForm(id: Option[Long], name: String, age: Int)
