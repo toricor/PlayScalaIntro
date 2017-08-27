@@ -7,8 +7,9 @@
 
 	<ul id="persons"></ul>
 
-  @form(CSRF(routes.PersonController.addPerson())) {
-		@inputText(person("name"))
+  @form(routes.PersonController.addPerson()) {
+		@CSRF.formField
+        @inputText(person("name"))
 		@inputText(person("age"))
 
 		<div class="buttons">
